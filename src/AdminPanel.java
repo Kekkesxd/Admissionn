@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 
-public class Departments extends JFrame{
+public class AdminPanel extends JFrame{
     private JPanel CardPanel,MainPanel,ComputerEngPanel, ElectricalEngPanel, IndustrialEngPanel;
     private JButton ComputerEngButton, ElectricalEngButton, IndustrialEngButton, BackButton;
     private JButton ComputerEngApplyButton, ElectricalEngApplyButton, IndustrialEngApplyButton;
@@ -27,16 +27,7 @@ public class Departments extends JFrame{
     private JComboBox<Integer> ElectricalEngBDay, ElectricalEngBMonth, ElectricalEngBYear;
     private JComboBox<Integer> IndustrialEngBDay, IndustrialEngBMonth, IndustrialEngBYear;
 
-    public Departments(){
-        //I want to create a card layout to switch between the main panel and the department panels
-        //I want to create a main panel that have three rectangles for the three departments devided equally in the panel
-        //I want to have a button on the bottom of each rectangle to apply for the department
-        //and when any of the buttons are pressed I want to switch to the department panel for the selected department
-        //I want to have a back button on the department panels to go back to the main panel
-        //The Deparment Panels will have a form to fill in the student information
-        //this form contains the following fields: Name, ID, Email, BirthDay, Phone, File all under each other with their labels next to them
-        //I want to have a title for each department panel inside their rectangle
-
+    public AdminPanel(){
 
         // Create an array of integers for the years
         Integer[] years = new Integer[100];
@@ -75,7 +66,7 @@ public class Departments extends JFrame{
         MainPanel.setBackground(Color.WHITE);
         CardPanel.add(MainPanel, "MainPanel");
         //make background black
-       // MainPanel.setBackground(Color.BLACK);
+        // MainPanel.setBackground(Color.BLACK);
 
         //Create the Computer Engineering Panel
         ComputerEngPanel = new JPanel();

@@ -1,19 +1,21 @@
 import java.time.LocalDate;
 
-public class Student {
+abstract public class Applicants {
     private String SName;
     private int IDnumber;
     private LocalDate BDay;
     private int SPhone;
     private String email;
+    private String Sfile;
+    private String DEPARTMENT;
 
-
-    public Student(String Sname, int IDnumber,String email, String filePath, LocalDate BDay, int SPhone) {
+    public Applicants(String Sname, int IDnumber,String email, String filePath, LocalDate BDay, int SPhone) {
         this.SName = Sname;
         this.IDnumber = IDnumber;
         this.email = email;
         this.BDay = BDay;
         this.SPhone = SPhone;
+        this.Sfile = filePath;
     }
 
     public LocalDate getBDay() {
@@ -56,5 +58,9 @@ public class Student {
         this.email = email;
     }
 
+    public String getSfile() {
+        return Sfile;
+    }
 
+   abstract public String getDEPARTMENT();
 }
